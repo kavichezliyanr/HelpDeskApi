@@ -11,30 +11,43 @@ import java.sql.Date;
  */
 public class Complaints {
 	
+	/* Unique ID generated */
 	private int requestId;
 	
-	String userId;
+	/* Id of the one who has raised request */
+	private String userId;
 	
-	String complaintModule;
+	/* Module for which the request has been raised */
+	private String complaintModule;
 	
-	String complaintTopic;
+	/* Sub Module for which the request has been generated */
+	private String complaintTopic;
 	
-	String complaintDetails;
+	/* Content of request */
+	private String complaintDetails;
 	
+	/* Date Of Request */
 	private Date requestDate;
 	
+	/* Status Of request */
 	private String requestStatus;
 	
+	/* Date of Status Change */
 	private Date statusChangeDate;
 	
+	/* Level */
 	private String statusLevel;
 	
-	private String statusPriority;
+	/* Severity Of Request */
+	private String statusSeverity;
 	
+	/* capture old request call no, if call is open again */
 	private int oldRequestId;
 	
+	/* catupring cross call type */
 	private String crossCallType;
 	
+	/* Type of call */
 	private String callType;
 		
 	public Complaints(){
@@ -174,19 +187,6 @@ public class Complaints {
 		this.statusLevel = statusLevel;
 	}
 
-	/**
-	 * @return the statusPriority
-	 */
-	public String getStatusPriority() {
-		return statusPriority;
-	}
-
-	/**
-	 * @param statusPriority the statusPriority to set
-	 */
-	public void setStatusPriority(String statusPriority) {
-		this.statusPriority = statusPriority;
-	}
 
 	/**
 	 * @return the oldRequestId
@@ -228,6 +228,20 @@ public class Complaints {
 	 */
 	public void setCallType(String callType) {
 		this.callType = callType;
+	}
+
+	/**
+	 * @return the statusSeverity
+	 */
+	public String getStatusSeverity() {
+		return statusSeverity;
+	}
+
+	/**
+	 * @param statusSeverity the statusSeverity to set
+	 */
+	public void setStatusSeverity(String statusSeverity) {
+		this.statusSeverity = statusSeverity;
 	}
 
 }
